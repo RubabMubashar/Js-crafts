@@ -29,4 +29,4 @@ Don’t forget to follow me on social media for updates and new projects:
   <li>
 <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/rubabmubashar-profile/">link</a>
   </li>
-Thank you for visiting my JavaScript Playground! Let's code together! 🌟
+Thank you for visiting my Js Craft! Let's code together! 🌟
