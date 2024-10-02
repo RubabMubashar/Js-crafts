@@ -18,15 +18,12 @@ Don’t forget to follow me on social media for updates and new projects:
 <br>
 <ul>
   <li>
-<b>GitHub:</b> <a href="https://github.com/RubabMubashar/">link</a>
+<b>GitHub:</b> <a href="https://github.com/RubabMubashar/" target="_blank">link</a>
   </li>
   <li>
-<b>Instagram:</b> <a href="https://www.instagram.com/thedesigningdev/">link</a>
+<b>Instagram:</b> <a href="https://www.instagram.com/thedesigningdev/" target="_blank">link</a>
   </li>
   <li>
-<b>Tiktok:</b> <a href="https://www.tiktok.com/@thedesigningdev/">link</a>
-  </li>
-  <li>
-<b>LinkedIn:</b> <a href="https://www.linkedin.com/in/rubabmubashar-profile/">link</a>
+<b>Tiktok:</b> <a href="https://www.tiktok.com/@thedesigningdev/" target="_blank">link</a>
   </li>
 Thank you for visiting my Js Craft! Let's code together! 🌟
