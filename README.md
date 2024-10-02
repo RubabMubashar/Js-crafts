@@ -16,12 +16,17 @@ If you enjoy my work and want to see more, please star this repository! Your sup
 <br>
 Don’t forget to follow me on social media for updates and new projects:
 <br>
+<ul>
+  <li>
 <b>GitHub:</b> <a href="https://github.com/RubabMubashar/">link</a>
-<br>
+  </li>
+  <li>
 <b>Instagram:</b> <a href="https://www.instagram.com/thedesigningdev/">link</a>
-<br>
+  </li>
+  <li>
 <b>Tiktok:</b> <a href="https://www.tiktok.com/@thedesigningdev/">link</a>
-<br>
+  </li>
+  <li>
 <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/rubabmubashar-profile/">link</a>
-<br>
+  </li>
 Thank you for visiting my JavaScript Playground! Let's code together! 🌟
