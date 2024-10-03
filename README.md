@@ -26,4 +26,4 @@ Don’t forget to follow me on social media for updates and new projects:
   <li>
 <b>Tiktok:</b> <a href="https://www.tiktok.com/@thedesigningdev/" target="_blank">link</a>
   </li>
-Thank you for visiting my Js Craft! Let's code together! 🌟
+Thank you for visiting Js Craft! Let's code together! 🌟
