@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Top</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 20000px;
+            background-color: plum ;
+        }
+        h1{
+            text-align: center;
+        }
+        #mybtn{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border: none;
+            outline: none;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Whole Website</h1>
+    <button id="mybtn" onclick="topfunction()"><svg height="30" viewBox="0 0 48 48" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M14.83 30.83l9.17-9.17 9.17 9.17 2.83-2.83-12-12-12 12z"/><path d="M0 0h48v48h-48z" fill="none"/></svg></button>
+
+    <script>
+        var mybutton = document.getElementById("mybtn");
+        window.onscroll=function(){
+            scrollfunction()
+        };
+
+        function scrollfunction() {
+            if (document.body.scrolltop > 20 ||
+            document.documentElement.scrollTop > 20) {
+                mybutton.style.display="block";
+            } else {
+                mybutton.style.display="none";
+            }
+        }
+
+        function topfunction(){
+            document.body.scrolltop = 0 ;
+            document.documentElement.scrollTop = 0 ;
+        }
+    </script>
+    
+</body>
+</html>
