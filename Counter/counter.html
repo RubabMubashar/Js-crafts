@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container {
+            text-align: center;
+            background: #5e3023;
+            padding: 30px 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #cccccc, #ffc188);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        #value {
+            height: 60px;
+            width: 150px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 20px;
+            box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            height: 60px;
+            width: 120px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:active {
+            transform: scale(0.95);
+            box-shadow: none;
+        }
+
+        #plus {
+            background-color: #bd5843;
+            color: white;
+        }
+
+        #minus {
+            background-color: #bd5843;
+            color: white;
+        }
+
+        #reset {
+            background-color: #ffc107;
+            color: black;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <div class="counter">
+            <button id="plus">+</button>
+            <div id="value">0</div>
+            <button id="minus">-</button>
+        </div>
+        <button id="reset">Reset</button>
+    </div>
+
+    <script>
+        let counter = 0;
+
+        const Value = document.getElementById('value');
+        const incrementBtn = document.getElementById('plus');
+        const decrementBtn = document.getElementById('minus');
+        const resetBtn = document.getElementById("reset");
+
+        incrementBtn.onclick = function () {
+            counter++;
+            Value.innerHTML = counter;
+        };
+
+        decrementBtn.onclick = function () {
+            counter--;
+            Value.innerHTML = counter;
+        };
+
+        resetBtn.onclick = function () {
+            counter = 0;
+            Value.innerHTML = counter;
+        };
+    </script>
+</body>
+</html>
