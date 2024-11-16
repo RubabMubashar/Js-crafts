@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "poppins", sans-serif;
+        }
+
+        #header {
+            background-color: black;
+            height: 70px;
+            width: 100%;
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header .logo {
+            width: 20%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        #header .navigation {
+            width: 50%;
+            line-height: 20px;
+        }
+
+        #header .navigation .navbar {
+            display: flex;
+            font-size: 23px;
+            justify-content: space-evenly;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .nav-link::after {
+            content: '';
+            height: 4px;
+            width: 100%;
+            background-color: yellow;
+            position: absolute;
+            left: 0;
+            bottom: -23px;
+            opacity: 0;
+            transition: all 0.2s;
+            pointer-events: none;
+        }
+
+        .nav-link:hover::after,
+        .nav-link:focus::after {
+            opacity: 1;
+        }
+
+
+#header .head-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.head-btn .btn-1,
+.head-btn .btn-2 {
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Log In Button */
+.btn-1 {
+    background-color: black;
+    color: white;
+    margin-right: 8px;
+}
+
+.btn-1:hover {
+    border: 2px solid white;
+}
+
+.btn-2 {
+    background-color: white;
+    color: black;
+}
+
+.btn-2:hover {
+    background-color: black;
+    color: white;
+}
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            #header{
+                background-color: black;
+                justify-content: space-between;
+            }
+            #header .navigation {
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #header .head-btn{
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #header .navigation .navbar {
+                flex-direction: column;
+                font-size: 20px;
+                background-color: black;
+                height: fit-content;
+                margin-top: 150px;
+            }
+
+            #header .head-btn {
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .hamburger {
+                display: flex;
+                padding-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="logo">
+            <h1>logo</h1>
+        </div>
+
+        <div class="navigation">
+            <ul type="none" class="navbar">
+                <li class="menu"><a class="nav-link">Home </a></li>
+                <li class="menu"><a class="nav-link">Services </a></li>
+                <li class="menu"><a class="nav-link">Contact </a></li>
+                <li class="menu"><a class="nav-link">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="head-btn">
+            <button class="btn-1">Log In </button>
+            <button class="btn-2">Sign up</button>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>
