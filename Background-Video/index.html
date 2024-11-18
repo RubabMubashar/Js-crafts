@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero-Bg</title>
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100);
+  opacity: 0.6;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  align-self: center;
+  font-size: 5rem ;
+  text-align: center;
+}
+
+.content-2{
+  z-index: 1;
+  margin-bottom: 5px;
+}
+ 
+.btn {
+ display: inline-block;
+ padding: 0.9rem 1.8rem;
+ font-size: 16px;
+ font-weight: 700;
+ color: #fff;
+ border: 2px solid #fff;
+ cursor: pointer;
+ position: relative;
+ background-color: transparent;
+ text-decoration: none;
+ overflow: hidden;
+ z-index: 1;
+}
+.btn:hover{
+  color: #000000;
+}
+.btn::before {
+ content: "";
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: #fff;
+ transform: translateX(-100%);
+ transition: all .3s;
+ z-index: -1;
+}
+
+.btn:hover::before {
+ transform: translateX(0);
+}
+
+
+
+</style>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+          <source src="v1.mp4" type="video/mp4">
+        </video>
+        <h1 class="content">
+          Hello World! 
+        </h1>
+        <p class="content-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a class="btn" href="#">Click me </a>
+      </div>
+</body>
+</html>
