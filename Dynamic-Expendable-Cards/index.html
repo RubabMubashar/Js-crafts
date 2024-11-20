@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Cards - Dynamic</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1200px;
+        }
+
+        .card {
+            position: relative;
+            flex: 1 1 calc(25% - 15px);
+            min-width: 250px;
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: #1a1a40;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .card:hover {
+            flex: 1 1 60%;
+            transform: translateY(-10px);
+            border: 2px solid #00ffcc;
+        }
+
+        .card:hover .background {
+            transform: scale(1.2);
+            opacity: 0.9;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(0.6);
+            transition: all 0.4s ease-in-out;
+            z-index: -1;
+        }
+
+        .card-content {
+            padding: 20px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .profile-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .description {
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .card:hover .title {
+            color: #00ffcc;
+        }
+
+        .card:hover .description {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="background" src="1.jpg" alt="Background 1">
+            <div class="card-content">
+                <div class="profile-image">
+                    <img src="icon.png" alt="Icon 1">
+                </div>
+                <h3 class="title">Simba</h3>
+                <p class="description">Cats are tiny bundles of fur and love, with paws soft as clouds</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="background" src="2.jpg" alt="Background 2">
+            <div class="card-content">
+                <div class="profile-image">
+                    <img src="icon.png" alt="Icon 2">
+                </div>
+                <h3 class="title">Tigress</h3>
+                <p class="description">Cats are tiny bundles of fur and love, with paws soft as clouds</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="background" src="3.jpg" alt="Background 3">
+            <div class="card-content">
+                <div class="profile-image">
+                    <img src="icon.png" alt="Icon 3">
+                </div>
+                <h3 class="title">Marble</h3>
+                <p class="description">Cats are tiny bundles of fur and love, with paws soft as clouds</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="background" src="4.jpg" alt="Background 4">
+            <div class="card-content">
+                <div class="profile-image">
+                    <img src="icon.png" alt="Icon 4">
+                </div>
+                <h3 class="title">Muffin</h3>
+                <p class="description">Cats are tiny bundles of fur and love, with paws soft as clouds</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
