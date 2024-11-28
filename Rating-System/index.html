@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2fc9e;
+        }
+
+        .rating-container {
+            text-align: center;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .star {
+            font-size: 2rem;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .star:hover,
+        .star.selected {
+            color: #ffc107;
+        }
+
+        .result p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .star {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rating-container">
+        <h1>Rate this Product</h1>
+        <div class="stars">
+            <span data-value="1" class="star">&#9733;</span>
+            <span data-value="2" class="star">&#9733;</span>
+            <span data-value="3" class="star">&#9733;</span>
+            <span data-value="4" class="star">&#9733;</span>
+            <span data-value="5" class="star">&#9733;</span>
+        </div>
+        <div class="result">
+            <p>Average Rating: <span id="average-rating">0</span>/5</p>
+            <p>Total Ratings: <span id="total-ratings">0</span></p>
+        </div>
+    </div>
+    <script>
+       const stars = document.querySelectorAll('.star');
+const averageRatingDisplay = document.getElementById('average-rating');
+const totalRatingsDisplay = document.getElementById('total-ratings');
+
+let totalRatings = 0;
+let sumRatings = 0;
+let currentUserRating = 0; // Track the current user's rating
+
+stars.forEach((star) => {
+  star.addEventListener('click', () => {
+    const selectedRating = parseInt(star.dataset.value);
+
+    // If the user clicks the same rating again, remove their rating
+    if (selectedRating === currentUserRating) {
+      sumRatings -= currentUserRating;
+      totalRatings -= 1;
+      currentUserRating = 0; // Reset user rating
+      updateAverageRating();
+      resetStars(); // Remove all highlights
+    } else {
+      // If the user changes their rating, update the sum and current rating
+      if (currentUserRating > 0) {
+        sumRatings -= currentUserRating; // Remove previous rating from the sum
+      }
+      sumRatings += selectedRating; // Add the new rating to the sum
+      if (currentUserRating === 0) {
+        totalRatings += 1; // Only increase total ratings if it’s a new rating
+      }
+      currentUserRating = selectedRating; // Update current user rating
+      updateAverageRating();
+      highlightStars(selectedRating); // Highlight the selected stars
+    }
+  });
+});
+
+function updateAverageRating() {
+  const averageRating = totalRatings === 0 ? 0 : (sumRatings / totalRatings).toFixed(1);
+  averageRatingDisplay.textContent = averageRating;
+  totalRatingsDisplay.textContent = totalRatings;
+}
+
+function highlightStars(rating) {
+  stars.forEach((star) => {
+    star.classList.remove('selected');
+    if (parseInt(star.dataset.value) <= rating) {
+      star.classList.add('selected');
+    }
+  });
+}
+
+function resetStars() {
+  stars.forEach((star) => {
+    star.classList.remove('selected');
+  });
+}
+
+
+    </script>
+</body>
+
+</html>
