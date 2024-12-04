@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Content</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content-wrapper">
+    <div class="tabs">
+        <div class="tab" id="tab1" onclick="showContent('content1')">Tab 1</div>
+        <div class="tab" id="tab2" onclick="showContent('content2')">Tab 2</div>
+        <div class="tab" id="tab3" onclick="showContent('content3')">Tab 3</div>
+    </div>
+
+    <div class="content" id="content1">
+        <h2>Lions</h2>
+        <p>Here are some images from our latest collection:</p>
+        <div class="gallery">
+            <img src="assets/lion1.jpg"  width="300px" height="300px" alt="Lion 1">
+            <img src="assets/lion2.jpg" width="300px" height="300px" alt="Lion 2">
+        </div>
+
+    </div>
+    <div class="content" id="content2">
+        <h2>Giraffe</h2>
+        <p>Here are some images from our latest collection:</p>
+        <div class="gallery">
+            <img src="assets/giraffe 1.jpg" width="300px" height="300px" alt="Giraffe 1">
+            <img src="assets/giraffe2.jpg" width="300px" height="300px" alt="Giraffe 2">
+        </div>
+    </div>
+    <div class="content" id="content3">
+        <h2>Frogs</h2>
+        <p>Here are some images from our latest collection:</p>
+        <div class="gallery">
+            <img src="assets/frog1.jpg" width="300px" height="300px" alt="Frog 1">
+            <img src="assets/frog2.jpg" width="300px" height="300px" alt="Frog 2">
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

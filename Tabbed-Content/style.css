@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    height: 120vh;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .tab:hover {
+    background-color: #ddd;
+  }
+  
+  .tab.active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .content {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .content.active {
+    display: block;
+  }
+  
+  .content-wrapper {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
