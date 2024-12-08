@@ -6,7 +6,7 @@
 <ul>
 <li><b>Diverse JavaScript Projects:</b> From elegant UI components to useful scripts, there's something for everyone!</li>
 <li><b>Learning Resources:</b> Discover snippets and code examples that can help you in your own projects.</li>
-<li><b>Engaging Demos:</b> Try out live examples to see these projects in action.</li>
+<li><b>Engaging Demos:</b> Try out live examples to see these projects in action On My Youtube Channel (Link Below)</li>
 </ul>
 
 Feel free to experiment and customize the projects to suit your needs!
@@ -18,7 +18,7 @@ Don’t forget to follow me on social media for updates and new projects:
 <br>
 <ul>
   <li>
-<b>GitHub:</b> <a href="https://github.com/RubabMubashar/" target="_blank">link</a>
+<b>Youtube:</b> <a href="https://www.youtube.com/@TheDesigningDev" target="_blank">link</a>
   </li>
   <li>
 <b>Instagram:</b> <a href="https://www.instagram.com/thedesigningdev/" target="_blank">link</a>
